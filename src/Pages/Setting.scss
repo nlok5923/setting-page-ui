@@ -1,0 +1,45 @@
+@mixin display-config($justify, $align, $direction) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin font-config($size, $weight, $color, $family) {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    font-family: $family;
+}
+
+.page {
+    background: #F9F9F9; 
+    height: 100vh;   
+}
+
+.container {
+    margin: 5% 20% 0 20%;
+    @include display-config(flex-start, none, column);
+
+    &-breadcrumb {
+        @include display-config(space-around, center, row);
+        @include font-config(15px, bold, #AAAAAA, "roboto");
+        width: 15%;
+        height: 3vh;
+        letter-spacing: 1px;
+    }
+
+    &-division {
+        @include display-config(space-between, center, row);
+        width: 100%;
+        margin-top: 1.5%;
+        
+        &-nav {
+            width: 25%;
+        }
+
+        &-page {
+            width: 71%;
+        }
+    }
+}

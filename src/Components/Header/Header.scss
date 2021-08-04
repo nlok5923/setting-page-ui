@@ -1,0 +1,67 @@
+@mixin display-config($justify, $align, $direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin font-config($size, $weight, $color, $family) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+  font-family: $family;
+}
+
+.bar {
+  box-shadow: 0px 1px 10px #d3d3d3;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: white;
+}
+
+.header {
+  @include display-config(space-between, center, row);
+  margin: 0 5% 0 5%;
+  height: 12vh;
+
+  &-logo {
+    width: 100px;
+  }
+
+  &-content {
+    @include display-config(space-around, center, row);
+    width: 50%;
+
+    &-subscription {
+      @include font-config(15px, bold, #aaaaaa, "roboto");
+      letter-spacing: 1px;
+    }
+
+    &-action {
+      @include display-config(space-around, center, row);
+      width: 28%;
+
+      &-profile {
+        @include display-config(space-around, center, row);
+
+        .lady {
+          border-radius: 50%;
+          height: 50%;
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+
+.notif-icon {
+  position: absolute;
+  top: 30px;
+  right: 255px;
+}
+
+.status-icon {
+  position: absolute;
+  top: 20px;
+  right: 155px;
+}

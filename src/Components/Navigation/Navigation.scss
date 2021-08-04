@@ -1,0 +1,50 @@
+@mixin display-config($justify, $align, $direction) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin font-config($size, $weight, $color, $family) {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    font-family: $family;
+}
+
+.navbar {
+    width: 100%;
+    height: 50vh;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 5px 10px rgd(242,242,242);
+    @include display-config(flex-start, flex-start, column);
+
+    &-head {
+        @include font-config(20px, bold, black, "roboto");
+        margin-left: 2rem;
+        margin-top: 2rem;
+    }
+
+    &-elements {
+        @include display-config(space-around, flex-start, column);
+        margin-left: 2rem;
+        margin-top: 2rem;
+        height: 50%;
+        width: 70%;
+    }
+}
+
+.element {
+    @include font-config(7px, bold, black, "roboto");
+    letter-spacing: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.element:hover {
+    background-color:rgb(114, 74, 210, 0.1);
+    color: #6F4AD2;
+}
