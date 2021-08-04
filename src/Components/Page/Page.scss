@@ -13,18 +13,19 @@
 }
 
 .expanded {
-    letter-spacing: 1px;
     background-color: white;
     border-radius: 20px;
-    height: 50vh;
+    height: 60vh;
     width: 100%;
-    @include font-config(20px, bold, #AAAAAA, "roboto");
+    box-shadow: 0px 5px 8px #E5E5E5 ;
+    @include font-config(20px, normal, #AAAAAA, "filson pro");
     @include display-config(space-between, flex-start, column);
 
     &-head {
         margin-left: 2rem;
         margin-top: 2rem;
         color: black;
+        font-weight: bold;
     }
 
     &-profile {
@@ -41,19 +42,26 @@
             }
 
             button {
-                @include font-config(13px, bold,#6F4AD2, "roboto");
+                @include font-config(13px, normal,#6F4AD2, "filson pro");
                 outline: none;
                 border: none;
                 border-radius: 30px;
                 background: none;
-                letter-spacing: 0.5px;
                 border: 1.6px solid #6F4AD2;
-                padding: 6px 20px;
+                padding: 10px 20px;
                 color: #6F4AD2;
+            }
+
+            button:hover {
+                cursor: pointer;
             }
 
             p {
                 color: #6F4AD2;
+            }
+
+            p:hover {
+                cursor: pointer;
             }
         }
 
@@ -66,12 +74,12 @@
                 width: 100%;
 
                 input {
-                    @include font-config(15px, bold, black, "roboto");
+                    @include font-config(15px, normal, black, "filson pro");
                     height: 5vh;
                     padding-left: 15px;
                     background-color: transparent;
                     border-radius: 5px;
-                    border: 2px solid #AAAAAA;
+                    border: 2px solid #C4C4C4;
                     width: 85%;
                     margin-top: 8px;
                 }
@@ -84,12 +92,16 @@
             outline: none;
             border-radius: 5px;
             padding: 12px 30px;
-            letter-spacing: 1px;
             border: none;
             float: right;
             margin-right: 2.01rem;
             margin-top: 2rem;
-            @include font-config(15px, bold, white, "roboto");
+            letter-spacing: 1px;
+            @include font-config(15px, bold, white, "filson pro");
+        }
+
+        .save-button:hover {
+            cursor: pointer;
         }
     }
 }

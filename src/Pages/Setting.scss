@@ -29,6 +29,10 @@
         letter-spacing: 1px;
     }
 
+    &-breadcrumb {
+        cursor: pointer;
+    }
+
     &-division {
         @include display-config(space-between, center, row);
         width: 100%;

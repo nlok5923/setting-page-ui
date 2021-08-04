@@ -28,6 +28,10 @@
     width: 100px;
   }
 
+  &-logo {
+      cursor: pointer;
+  }
+
   &-content {
     @include display-config(space-around, center, row);
     width: 50%;
@@ -50,18 +54,22 @@
           width: 50%;
         }
       }
+
+      img:hover {
+          cursor: pointer;
+      }
     }
   }
 }
 
 .notif-icon {
   position: absolute;
-  top: 30px;
-  right: 255px;
+  top: 32px;
+  right: 257px;
 }
 
 .status-icon {
   position: absolute;
-  top: 20px;
-  right: 155px;
+  top: 22px;
+  right: 157px;
 }

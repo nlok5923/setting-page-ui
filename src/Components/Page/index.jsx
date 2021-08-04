@@ -18,11 +18,11 @@ const Page = () => {
                 <div className="expanded-profile-form">
                     <div className="expanded-profile-form-field">
                         <label for="name"> Full name </label> <br />
-                        <input type="text" name="full_name" />
+                        <input type="text" name="full_name" value="Ravi" />
                     </div>
                     <div className="expanded-profile-form-field">
                         <label for="name"> Email address </label> <br />
-                        <input type="text" name="full_name" />
+                        <input type="text" name="full_name" value="ravi@youremail.com" />
                     </div>
                 </div>
                 <button className="save-button"> Save </button>
